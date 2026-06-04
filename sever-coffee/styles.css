@@ -1,0 +1,615 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --ink: #111615;
+  --deep: #182a25;
+  --green: #285247;
+  --amber: #c8893d;
+  --cream: #f4eadc;
+  --paper: #e8dccb;
+  --steel: #8a9691;
+  --muted: #66706a;
+  --line: rgba(17, 22, 21, 0.16);
+  --shadow: 0 24px 70px rgba(17, 22, 21, 0.22);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  background: var(--cream);
+  color: var(--ink);
+  font-family: Inter, Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 20;
+  display: flex;
+  min-height: 74px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 0 clamp(16px, 5vw, 70px);
+  color: white;
+  background: linear-gradient(180deg, rgba(17, 22, 21, 0.72), rgba(17, 22, 21, 0));
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 900;
+}
+
+.brand span {
+  display: grid;
+  width: 38px;
+  height: 38px;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.44);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.12);
+  color: #f8d29a;
+  font-size: 12px;
+  letter-spacing: 0;
+}
+
+.nav-links {
+  display: flex;
+  gap: 22px;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 14px;
+}
+
+.nav-links a:hover {
+  color: white;
+}
+
+.hero {
+  position: relative;
+  min-height: 720px;
+  height: 88vh;
+  max-height: 920px;
+  display: grid;
+  align-items: end;
+  padding: 122px clamp(16px, 7vw, 92px) 42px;
+  background-image: url("assets/hero-coffee-room.png");
+  background-position: center;
+  background-size: cover;
+  color: white;
+}
+
+.hero-layer {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(17, 22, 21, 0.86), rgba(17, 22, 21, 0.42) 46%, rgba(17, 22, 21, 0.12)),
+    linear-gradient(0deg, rgba(17, 22, 21, 0.84), rgba(17, 22, 21, 0.16) 54%);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  width: min(760px, 100%);
+}
+
+.kicker,
+.eyebrow {
+  margin: 0 0 16px;
+  color: var(--amber);
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  max-width: 820px;
+  margin-bottom: 18px;
+  font-size: clamp(54px, 9vw, 122px);
+  line-height: 0.88;
+  letter-spacing: 0;
+}
+
+h2 {
+  margin-bottom: 18px;
+  font-size: clamp(34px, 4.8vw, 64px);
+  line-height: 1.02;
+  letter-spacing: 0;
+}
+
+h3 {
+  margin-bottom: 10px;
+  font-size: 24px;
+  line-height: 1.12;
+}
+
+.hero-content p {
+  width: min(620px, 100%);
+  margin-bottom: 28px;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 19px;
+}
+
+.hero-actions,
+.visit-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.button {
+  display: inline-flex;
+  min-height: 48px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 18px;
+  border: 1px solid var(--amber);
+  border-radius: 8px;
+  background: var(--amber);
+  color: var(--ink);
+  font-weight: 900;
+}
+
+.button.light {
+  border-color: var(--cream);
+  background: var(--cream);
+}
+
+.button.ghost {
+  border-color: rgba(255, 255, 255, 0.48);
+  background: rgba(255, 255, 255, 0.09);
+  color: white;
+  backdrop-filter: blur(12px);
+}
+
+.button.dark {
+  border-color: var(--ink);
+  background: var(--ink);
+  color: white;
+}
+
+.today-board {
+  position: absolute;
+  right: clamp(16px, 6vw, 86px);
+  bottom: 44px;
+  z-index: 1;
+  width: 280px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 8px;
+  background: rgba(17, 22, 21, 0.36);
+  padding: 18px;
+  backdrop-filter: blur(16px);
+}
+
+.today-board span,
+.today-board strong {
+  display: block;
+}
+
+.today-board span {
+  margin-bottom: 10px;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 13px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.today-board strong {
+  padding: 10px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+.signal-strip {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  background: var(--ink);
+  color: white;
+}
+
+.signal-strip div {
+  min-height: 126px;
+  padding: 28px clamp(16px, 6vw, 74px);
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.signal-strip strong,
+.signal-strip span {
+  display: block;
+}
+
+.signal-strip strong {
+  margin-bottom: 8px;
+  color: #f5c176;
+  font-size: 26px;
+}
+
+.signal-strip span {
+  color: rgba(255, 255, 255, 0.62);
+}
+
+.section {
+  padding: 84px clamp(16px, 7vw, 92px);
+}
+
+.section-head {
+  display: grid;
+  grid-template-columns: minmax(0, 540px) minmax(0, 1fr);
+  gap: 52px;
+  align-items: start;
+  margin-bottom: 34px;
+}
+
+.section-head > *,
+.room-section > *,
+.tasting-section > * {
+  min-width: 0;
+}
+
+.section-head p,
+.room-copy p,
+.tasting-copy p,
+.passport-grid p,
+.menu-card p,
+.visit-section p {
+  color: var(--muted);
+}
+
+.section-note {
+  display: grid;
+  gap: 18px;
+}
+
+.section-note .eyebrow,
+.section-note p {
+  margin-bottom: 0;
+}
+
+.taste-strip {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.taste-strip span {
+  display: grid;
+  gap: 3px;
+  min-height: 72px;
+  align-content: center;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fffaf1;
+  padding: 12px;
+}
+
+.taste-strip strong,
+.taste-strip em {
+  display: block;
+  font-style: normal;
+}
+
+.taste-strip strong {
+  color: var(--deep);
+  font-size: 18px;
+}
+
+.taste-strip em {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.menu-card {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  align-items: stretch;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fffaf1;
+  padding: 16px;
+  box-shadow: 0 14px 36px rgba(17, 22, 21, 0.08);
+}
+
+.menu-card img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 7px;
+}
+
+.menu-card strong {
+  color: var(--green);
+  font-size: 22px;
+}
+
+.tag {
+  display: inline-flex;
+  min-height: 28px;
+  align-items: center;
+  margin-bottom: 14px;
+  padding: 0 10px;
+  border-radius: 999px;
+  background: rgba(40, 82, 71, 0.12);
+  color: var(--green);
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.room-section {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: 56px;
+  background: var(--deep);
+  color: white;
+}
+
+.room-copy p,
+.room-section .eyebrow {
+  color: rgba(255, 255, 255, 0.66);
+}
+
+.room-details {
+  display: grid;
+  gap: 10px;
+}
+
+.detail-row {
+  display: grid;
+  grid-template-columns: 120px minmax(0, 1fr);
+  gap: 22px;
+  padding: 22px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+.detail-row span {
+  color: #f5c176;
+  font-size: 13px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.detail-row strong {
+  font-size: 24px;
+  line-height: 1.14;
+}
+
+.tasting-section {
+  display: grid;
+  grid-template-columns: minmax(0, 0.96fr) minmax(0, 1fr);
+  gap: 48px;
+  align-items: center;
+  background: var(--paper);
+}
+
+.tasting-visual img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+.tasting-list {
+  display: grid;
+  gap: 10px;
+  margin: 24px 0;
+}
+
+.tasting-list span {
+  width: fit-content;
+  max-width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 8px 12px;
+  color: var(--deep);
+  font-weight: 900;
+}
+
+.passport-section {
+  background: var(--cream);
+}
+
+.section-head.compact {
+  grid-template-columns: 1fr;
+  max-width: 680px;
+}
+
+.passport-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.passport-grid article {
+  min-height: 250px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fffaf1;
+  padding: 24px;
+}
+
+.passport-grid span {
+  display: inline-flex;
+  margin-bottom: 34px;
+  color: var(--amber);
+  font-weight: 900;
+}
+
+.visit-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  margin: 84px clamp(16px, 7vw, 92px);
+  border-radius: 8px;
+  background:
+    linear-gradient(90deg, rgba(17, 22, 21, 0.94), rgba(40, 82, 71, 0.72)),
+    url("assets/hero-coffee-room.png");
+  background-position: center;
+  background-size: cover;
+  color: white;
+  padding: 44px;
+  box-shadow: var(--shadow);
+}
+
+.visit-section > div:first-child {
+  max-width: 720px;
+}
+
+.visit-section p,
+.visit-section .eyebrow {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 30px clamp(16px, 7vw, 92px);
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+}
+
+@media (max-width: 960px) {
+  .hero {
+    min-height: 820px;
+    height: auto;
+    max-height: none;
+  }
+
+  .today-board {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    z-index: 1;
+    width: min(320px, 100%);
+    margin-top: 28px;
+  }
+
+  .section-head,
+  .menu-grid,
+  .room-section,
+  .tasting-section {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+@media (max-width: 680px) {
+  .topbar {
+    position: absolute;
+    align-items: flex-start;
+    flex-direction: column;
+    min-height: auto;
+    padding: 14px 12px;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .hero {
+    min-height: 860px;
+    height: auto;
+    max-height: none;
+    padding: 148px 12px 34px;
+    background-position: 62% center;
+  }
+
+  h1 {
+    max-width: 360px;
+    font-size: 50px;
+    line-height: 0.94;
+  }
+
+  h2 {
+    font-size: 30px;
+    line-height: 1.1;
+  }
+
+  .hero-content p {
+    max-width: 350px;
+    font-size: 16px;
+  }
+
+  .hero-actions,
+  .visit-actions,
+  .visit-section,
+  .footer {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .button {
+    max-width: 100%;
+  }
+
+  .signal-strip,
+  .passport-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .signal-strip div {
+    min-height: 106px;
+    padding: 22px 12px;
+  }
+
+  .section {
+    padding: 58px 12px;
+  }
+
+  .menu-card {
+    grid-template-columns: 1fr;
+  }
+
+  .detail-row {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .detail-row strong {
+    font-size: 21px;
+  }
+
+  .visit-section {
+    margin: 58px 12px;
+    padding: 28px;
+  }
+}

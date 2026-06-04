@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ALOS Studio VK Cover 1590x530</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        width: 1590px;
+        height: 530px;
+        margin: 0;
+        overflow: hidden;
+        background: #f6f7f2;
+        color: #191a18;
+        font-family: Inter, Arial, Helvetica, sans-serif;
+      }
+
+      .cover {
+        position: relative;
+        width: 1590px;
+        height: 530px;
+        overflow: hidden;
+        background:
+          linear-gradient(125deg, rgba(197, 220, 92, 0.3), transparent 34%),
+          linear-gradient(315deg, rgba(20, 125, 115, 0.17), transparent 35%),
+          #f6f7f2;
+      }
+
+      .outline {
+        position: absolute;
+        inset: 38px 54px;
+        border: 2px solid rgba(25, 26, 24, 0.08);
+        border-radius: 22px;
+      }
+
+      .main {
+        position: absolute;
+        top: 70px;
+        left: 286px;
+        width: 720px;
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+        margin-bottom: 34px;
+      }
+
+      .mark {
+        display: grid;
+        width: 62px;
+        height: 62px;
+        place-items: center;
+        border-radius: 12px;
+        background: #191a18;
+        color: #c5dc5c;
+        font-size: 23px;
+        font-weight: 900;
+      }
+
+      .brand-name {
+        font-size: 31px;
+        font-weight: 900;
+      }
+
+      h1 {
+        width: 760px;
+        margin: 0 0 18px;
+        font-size: 62px;
+        font-weight: 900;
+        line-height: 0.98;
+        letter-spacing: 0;
+      }
+
+      p {
+        width: 660px;
+        margin: 0 0 28px;
+        color: #646860;
+        font-size: 24px;
+        font-weight: 650;
+        line-height: 1.22;
+      }
+
+      .chips {
+        display: flex;
+        gap: 12px;
+      }
+
+      .chip {
+        display: inline-flex;
+        align-items: center;
+        min-height: 48px;
+        padding: 0 20px;
+        border: 2px solid #191a18;
+        border-radius: 10px;
+        background: #ffffff;
+        font-size: 19px;
+        font-weight: 850;
+      }
+
+      .chip.dark {
+        background: #191a18;
+        color: #ffffff;
+      }
+
+      .panel {
+        position: absolute;
+        top: 78px;
+        right: 130px;
+        width: 340px;
+        height: 350px;
+        border: 2px solid rgba(25, 26, 24, 0.1);
+        border-radius: 16px;
+        background: #ffffff;
+        box-shadow: 0 24px 64px rgba(22, 28, 22, 0.14);
+        overflow: hidden;
+      }
+
+      .panel-top {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        height: 54px;
+        padding: 0 20px;
+        border-bottom: 2px solid #d9ded0;
+      }
+
+      .dot {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: #e56b4f;
+      }
+
+      .dot:nth-child(2) {
+        background: #d9a441;
+      }
+
+      .dot:nth-child(3) {
+        background: #147d73;
+      }
+
+      .panel-body {
+        padding: 24px;
+      }
+
+      .screen {
+        height: 126px;
+        margin-bottom: 18px;
+        padding: 20px;
+        border-radius: 12px;
+        background: #191a18;
+        color: #ffffff;
+      }
+
+      .screen strong {
+        display: block;
+        margin-bottom: 10px;
+        color: #c5dc5c;
+        font-size: 17px;
+        font-weight: 900;
+      }
+
+      .screen span {
+        display: block;
+        width: 225px;
+        font-size: 24px;
+        font-weight: 900;
+        line-height: 1.02;
+      }
+
+      .bars {
+        display: grid;
+        gap: 12px;
+      }
+
+      .bar {
+        height: 36px;
+        border-radius: 8px;
+        background: #d9ded0;
+      }
+
+      .bar.teal {
+        width: 78%;
+        background: #147d73;
+      }
+
+      .bar.coral {
+        width: 58%;
+        background: #e56b4f;
+      }
+
+      .accent {
+        position: absolute;
+        border-radius: 999px;
+      }
+
+      .accent.teal {
+        top: 74px;
+        left: 96px;
+        width: 86px;
+        height: 312px;
+        background: #147d73;
+      }
+
+      .accent.coral {
+        right: 44px;
+        bottom: 42px;
+        width: 62px;
+        height: 220px;
+        background: #e56b4f;
+      }
+
+      .accent.gold {
+        right: 62px;
+        top: 50px;
+        width: 48px;
+        height: 126px;
+        background: #d9a441;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="cover" aria-label="ALOS Studio VK cover 1590 by 530">
+      <div class="outline"></div>
+      <div class="accent teal"></div>
+      <div class="accent coral"></div>
+      <div class="accent gold"></div>
+      <section class="main">
+        <div class="brand">
+          <div class="mark">AS</div>
+          <div class="brand-name">ALOS Studio</div>
+        </div>
+        <h1>Лендинги и контент для малого бизнеса</h1>
+        <p>Сайт, тексты, визуал и демо-кейсы без долгого запуска.</p>
+        <div class="chips">
+          <span class="chip dark">от 3 000 ₽</span>
+          <span class="chip">t.me/aLoS_91</span>
+        </div>
+      </section>
+      <aside class="panel" aria-hidden="true">
+        <div class="panel-top">
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+        <div class="panel-body">
+          <div class="screen">
+            <strong>быстрый запуск</strong>
+            <span>сайт, который ведет к заявке</span>
+          </div>
+          <div class="bars">
+            <span class="bar teal"></span>
+            <span class="bar"></span>
+            <span class="bar coral"></span>
+          </div>
+        </div>
+      </aside>
+    </main>
+  </body>
+</html>

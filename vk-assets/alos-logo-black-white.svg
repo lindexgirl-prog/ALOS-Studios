@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200" viewBox="0 0 1200 1200" role="img" aria-label="ALOS Studio abstract white logo on black background">
+  <rect width="1200" height="1200" fill="#050607"/>
+  <g transform="translate(600 600) scale(1.08) translate(-600 -600)">
+    <path fill="#fff" d="M430 250H872L752 374L544 420Z"/>
+    <path fill="#fff" d="M344 392L510 282L632 398L508 556L256 612Z"/>
+    <path fill="#fff" d="M756 388L1000 526L854 662L668 520Z"/>
+    <path fill="#fff" d="M632 626L830 676L616 936L468 802Z"/>
+    <path fill="#fff" d="M248 638L508 580L438 782L292 746Z"/>
+    <path fill="#050607" d="M552 486L676 436L766 552L630 666L500 582Z"/>
+  </g>
+</svg>

@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ALOS Studio VK Cover 1920x768</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        width: 1920px;
+        height: 768px;
+        margin: 0;
+        overflow: hidden;
+        background: #f6f7f2;
+        color: #191a18;
+        font-family: Inter, Arial, Helvetica, sans-serif;
+      }
+
+      .cover {
+        position: relative;
+        width: 1920px;
+        height: 768px;
+        overflow: hidden;
+        background:
+          linear-gradient(120deg, rgba(197, 220, 92, 0.28), transparent 32%),
+          linear-gradient(315deg, rgba(20, 125, 115, 0.18), transparent 36%),
+          #f6f7f2;
+      }
+
+      .band {
+        position: absolute;
+        inset: 52px 76px;
+        border: 2px solid rgba(25, 26, 24, 0.08);
+        border-radius: 26px;
+      }
+
+      .safe-core {
+        position: absolute;
+        top: 98px;
+        left: 420px;
+        width: 780px;
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 22px;
+        margin-bottom: 54px;
+      }
+
+      .mark {
+        display: grid;
+        width: 74px;
+        height: 74px;
+        place-items: center;
+        border-radius: 14px;
+        background: #191a18;
+        color: #c5dc5c;
+        font-size: 28px;
+        font-weight: 900;
+      }
+
+      .brand-name {
+        font-size: 36px;
+        font-weight: 900;
+      }
+
+      h1 {
+        width: 860px;
+        margin: 0 0 28px;
+        font-size: 82px;
+        font-weight: 900;
+        line-height: 0.98;
+        letter-spacing: 0;
+      }
+
+      .lead {
+        width: 780px;
+        margin: 0 0 38px;
+        color: #646860;
+        font-size: 30px;
+        font-weight: 650;
+        line-height: 1.22;
+      }
+
+      .chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+      }
+
+      .chip {
+        display: inline-flex;
+        align-items: center;
+        min-height: 56px;
+        padding: 0 24px;
+        border: 2px solid #191a18;
+        border-radius: 12px;
+        background: #ffffff;
+        font-size: 23px;
+        font-weight: 850;
+      }
+
+      .chip.dark {
+        background: #191a18;
+        color: #ffffff;
+      }
+
+      .panel {
+        position: absolute;
+        top: 116px;
+        right: 174px;
+        width: 526px;
+        height: 520px;
+        border: 2px solid rgba(25, 26, 24, 0.1);
+        border-radius: 18px;
+        background: #ffffff;
+        box-shadow: 0 32px 80px rgba(22, 28, 22, 0.14);
+        overflow: hidden;
+      }
+
+      .panel-top {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        height: 70px;
+        padding: 0 26px;
+        border-bottom: 2px solid #d9ded0;
+      }
+
+      .dot {
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background: #e56b4f;
+      }
+
+      .dot:nth-child(2) {
+        background: #d9a441;
+      }
+
+      .dot:nth-child(3) {
+        background: #147d73;
+      }
+
+      .panel-body {
+        padding: 34px;
+      }
+
+      .mini-hero {
+        height: 166px;
+        margin-bottom: 24px;
+        padding: 26px;
+        border-radius: 14px;
+        background: #191a18;
+        color: #ffffff;
+      }
+
+      .mini-hero strong {
+        display: block;
+        margin-bottom: 14px;
+        color: #c5dc5c;
+        font-size: 22px;
+        font-weight: 900;
+      }
+
+      .mini-hero span {
+        display: block;
+        width: 330px;
+        font-size: 31px;
+        font-weight: 900;
+        line-height: 1.04;
+      }
+
+      .mini-grid {
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 18px;
+      }
+
+      .mini-card {
+        min-height: 118px;
+        padding: 20px;
+        border: 2px solid #d9ded0;
+        border-radius: 14px;
+      }
+
+      .mini-card.teal {
+        border-color: #147d73;
+      }
+
+      .mini-card.coral {
+        border-color: #e56b4f;
+      }
+
+      .mini-line {
+        height: 12px;
+        margin-bottom: 14px;
+        border-radius: 999px;
+        background: #d9ded0;
+      }
+
+      .mini-line.short {
+        width: 64%;
+      }
+
+      .mini-button {
+        width: 128px;
+        height: 34px;
+        border-radius: 8px;
+        background: #147d73;
+      }
+
+      .accent {
+        position: absolute;
+        border-radius: 999px;
+      }
+
+      .accent.teal {
+        top: 96px;
+        left: 134px;
+        width: 116px;
+        height: 426px;
+        background: #147d73;
+      }
+
+      .accent.coral {
+        right: 72px;
+        bottom: 70px;
+        width: 86px;
+        height: 292px;
+        background: #e56b4f;
+      }
+
+      .accent.gold {
+        right: 84px;
+        top: 86px;
+        width: 64px;
+        height: 178px;
+        background: #d9a441;
+      }
+
+      .footer-note {
+        position: absolute;
+        left: 420px;
+        bottom: 62px;
+        color: #214d3b;
+        font-size: 22px;
+        font-weight: 900;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="cover" aria-label="ALOS Studio VK cover 1920 by 768">
+      <div class="band"></div>
+      <div class="accent teal"></div>
+      <div class="accent coral"></div>
+      <div class="accent gold"></div>
+      <section class="safe-core">
+        <div class="brand">
+          <div class="mark">AS</div>
+          <div class="brand-name">ALOS Studio</div>
+        </div>
+        <h1>Лендинги и контент для малого бизнеса</h1>
+        <p class="lead">Собираем понятную онлайн-упаковку: сайт, тексты, визуал и демо-кейсы без долгого запуска.</p>
+        <div class="chips">
+          <span class="chip dark">от 3 000 ₽</span>
+          <span class="chip">t.me/aLoS_91</span>
+          <span class="chip">vk.ru/alos_studio</span>
+        </div>
+      </section>
+      <aside class="panel" aria-hidden="true">
+        <div class="panel-top">
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+        <div class="panel-body">
+          <div class="mini-hero">
+            <strong>быстрый запуск</strong>
+            <span>сайт, который ведет к заявке</span>
+          </div>
+          <div class="mini-grid">
+            <div class="mini-card teal">
+              <div class="mini-line"></div>
+              <div class="mini-line short"></div>
+              <div class="mini-button"></div>
+            </div>
+            <div class="mini-card coral">
+              <div class="mini-line"></div>
+              <div class="mini-line short"></div>
+              <div class="mini-button"></div>
+            </div>
+          </div>
+        </div>
+      </aside>
+      <div class="footer-note">сайты · контент · визуальная упаковка</div>
+    </main>
+  </body>
+</html>
